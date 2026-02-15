@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroPode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Header link underline animation */
+        .header-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .header-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+            background: #ffffff;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform .14s ease;
+        }
+
+        .header-link:hover::after,
+        .header-link:focus::after {
+            transform: scaleX(1);
+        }
+
+        .header-link:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body class="text-white font-montserrat">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 shadow-md">
+        <div class="text-center py-1 text-sm bg-slate-500 text-white font-semibold">
+            SEJA UM REVENDEDOR! <a href="#services" class="underline font-semibold">SAIBA MAIS</a>
+        </div>
+        <div class="bg-[#28282A]">
+            <nav
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-14 sm:h-16 md:h-20 lg:h-24">
+                <a href="#home" class="inline-block">
+                    <img src="imgs/Logo.png" alt="ZeroPode" class="h-8 sm:h-12 md:h-16 lg:h-18 object-contain" />
+                </a>
+                <button id="nav-toggle" aria-controls="mobile-menu" aria-expanded="false"
+                    class="md:hidden p-2 rounded-md text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-brandlogo">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <ul class="hidden md:flex space-x-6 h-full items-center">
+                    <li class="h-full"><a href="#home"
+                            class="text-white hover:opacity-90 header-link h-full flex items-center font-light">Produtos</a>
+                    </li>
+                    <li class="h-full"><a href="#about"
+                            class="text-white hover:opacity-90 header-link h-full flex items-center font-light">Sobre a
+                            ZeroPode</a>
+                    </li>
+                    <li class="h-full"><a href="#services"
+                            class="text-white hover:opacity-90 header-link h-full flex items-center font-bold">Seja um
+                            revendedor</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="#home" class="block text-white hover:opacity-90 header-link">Produtos</a></li>
+                    <li><a href="#about" class="block text-white hover:opacity-90 header-link">Sobre a ZeroPode</a></li>
+                    <li><a href="#services" class="block text-white hover:opacity-90 header-link">Seja um revendedor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="home" class="text-center mb-16 w-full">
+        <h1 class="sr-only">Welcome to ZeroPode</h1>
+        <div class="relative w-full mb-8 overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out" id="carouselSlides">
+                <div class="w-full flex-shrink-0 flex items-center justify-center">
+                    <img src="https://cdn.shoppub.io/cdn-cgi/image/q=80,f=auto/santaremboots/media/uploads/banners/2025/fujaunta/banner-hilux.png"
+                        alt="Carousel Slide 1" class="w-full h-auto block" />
+                </div>
+                <div class="w-full flex-shrink-0 flex items-center justify-center">
+                    <img src="https://cdn.shoppub.io/cdn-cgi/image/q=80,f=auto/santaremboots/media/uploads/banners/2024/vgvovhus/banner-frete-gratis-brasil.png"
+                        alt="Carousel Slide 2" class="w-full h-auto block" />
+                </div>
+                <div class="w-full flex-shrink-0 flex items-center justify-center">
+                    <img src="https://cdn.shoppub.io/cdn-cgi/image/q=80,f=auto/santaremboots/media/uploads/banners/2026/cayvbpkn/banner-desconto-em-dobro.png"
+                        alt="Carousel Slide 3" class="w-full h-auto block" />
+                </div>
+            </div>
+            <div class="flex justify-center gap-2 my-4">
+                <span class="dot-carousel w-3 h-3 rounded-full bg-black cursor-pointer transition-colors duration-300"
+                    data-index="0"></span>
+                <span
+                    class="dot-carousel w-3 h-3 rounded-full bg-black/50 cursor-pointer transition-colors duration-300"
+                    data-index="1"></span>
+                <span
+                    class="dot-carousel w-3 h-3 rounded-full bg-black/50 cursor-pointer transition-colors duration-300"
+                    data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 text-[#28282A]">
+
+
+        <section id="about" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#28282A] mb-4">PRODUTOS</h2>
+            <p class="text-[#28282A] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+
+        <section id="services" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#28282A] mb-4">SOBRE A ZEROPODE</h2>
+            <p class="text-[#28282A] mb-4">We provide exceptional services tailored to your needs.</p>
+        </section>
+
+        <section id="contact" class="mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold text-[#28282A] mb-4">SEJA UM REVENDEDOR</h2>
+            <p class="text-[#28282A]">Get in touch with us today.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#28282A] text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 ZeroPode. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            const navToggle = document.getElementById('nav-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (!navToggle || !mobileMenu) return;
+            navToggle.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                mobileMenu.classList.toggle('hidden');
+            });
+        })();
+
+        // Carousel logic
+        (function () {
+            const carouselSlides = document.getElementById('carouselSlides');
+            const dots = document.querySelectorAll('.dot-carousel');
+            let currentIndex = 0;
+            const totalSlides = 3;
+            const autoplayInterval = 5000; // 3 segundos
+
+            function showSlide(index) {
+                currentIndex = (index + totalSlides) % totalSlides;
+                carouselSlides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, i) => {
+                    if (i === currentIndex) {
+                        dot.classList.remove('bg-black/50');
+                        dot.classList.add('bg-black');
+                    } else {
+                        dot.classList.remove('bg-black');
+                        dot.classList.add('bg-black/50');
+                    }
+                });
+            }
+
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+
+            // Auto-rotate carousel
+            setInterval(nextSlide, autoplayInterval);
+
+            // Click dots to navigate
+            dots.forEach((dot) => {
+                dot.addEventListener('click', function () {
+                    showSlide(parseInt(this.dataset.index));
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
